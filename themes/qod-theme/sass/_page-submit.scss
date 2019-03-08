@@ -1,0 +1,64 @@
+/* Submit a Quote Page */
+
+.page-id-213 {
+
+    header {
+        font-size: 2rem;
+    }
+    
+    form {
+        color:#fff;
+        
+
+       input, textarea, {
+        color: white;    
+        background:#222;
+        border: #0c0 solid 1px;
+        width: 25rem;
+        
+
+            button {
+                background-color: #222;
+                border: 2px solid #0c0;
+                border-radius: 3px;
+                color: #0c0;
+                font-family: "Exo Light";
+                font-size: 1rem;
+                font-weight: 700;
+                line-height: 1;
+                padding: .75rem 2.25rem;
+                box-shadow: none;
+                text-shadow: none;
+                max-width: 15rem;
+                max-height: 3rem;
+                outline: none;
+                    &:hover { 
+                    color: $color__link - 10%;
+                }
+            }
+        }
+
+        #quote {
+            width:30rem;
+            height:10rem; 
+        }
+
+        input#submit {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1;
+            padding: .75rem 2.25rem;
+            box-shadow: none;
+            text-shadow: none;
+    
+    outline: none;
+            &:hover {
+            color: $color__link - 10%;
+            }
+
+        }
+    }
+}

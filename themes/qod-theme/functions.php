@@ -60,8 +60,26 @@ function qod_scripts() {
 
 	wp_enqueue_script( 'qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'qod-starter-api', get_template_directory_uri() . '/build/js/api.min.js', array(), '20151215', true );
+
+	wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0' );
+	
+		if ( function_exists ( 'rest_url' )) {
+		wp_enqueue_script( 'qod_api', get_template_directory_uri() . '/build/js/api.min.js', array( 'jquery' ), false, true );
+		 wp_localize_script( 'qod_api', 'api_vars', array(
+			 'root_url' => esc_url_raw( rest_url() ),
+			 'home_url' => esc_url_raw( home_url() ),
+		   'nonce' => wp_create_nonce( 'wp_rest' ),
+		   'success' => 'Thanks, your submission was received!',
+		   'failure' => 'Your submission could not be processed.',
+		 ) );
+
+		}
+	
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );
+
+
 
 /**
  * Custom functions that act independently of the theme templates.
@@ -82,3 +100,5 @@ require get_template_directory() . '/inc/metaboxes.php';
  * Custom WP API modifications.
  */
 require get_template_directory() . '/inc/api.php';
+
+

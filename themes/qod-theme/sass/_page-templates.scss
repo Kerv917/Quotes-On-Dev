@@ -2,6 +2,61 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-/* All Archives Page */
+#page {
+    width: 1080px;
+    margin: 0 auto;
+}
 
-/* Submit a Quote Page */
+.site-content {
+    @include desktop {
+    margin: ($base__space-unit * 3) 175px $base__space-unit;
+    position: relative;
+ 
+    &:before,
+    &:after {
+        color: $color__green;
+        font-family: 'FontAwesome';
+        font-size: 125px;
+        line-height: 125px;
+        position: absolute;
+        top: 0;
+    }
+    &:before {
+        content: '\f10d';
+        left: -175px;
+    }
+ 
+    &:after {
+        content: '\f10e';
+        right: -175px;
+    }
+ }
+ }
+
+.entry-meta {
+    h2 {
+        font-size: 1.25rem;
+    }
+}
+
+.qod-button {
+    background-color: #222;
+    border: 2px solid #0c0;
+    border-radius: 3px;
+    color: #0c0;
+    font-family: "Exo Light";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: .75rem 2.25rem;
+    box-shadow: none;
+    text-shadow: none;
+    max-width: 15rem;
+    max-height: 3rem;
+    outline: none;
+        &:hover { 
+        color: $color__link - 10%;
+        box-shadow: none;
+        border-color: #0c0;
+    }
+}

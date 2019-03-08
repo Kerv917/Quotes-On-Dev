@@ -8,8 +8,9 @@ html {
 }
 
 *,
+
 *:before,
-*:after {
+*:after   {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit;
 }
@@ -17,6 +18,24 @@ html {
 body {
   background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
+
+body {  
+  background: #222222;
+  word-spacing: 1.5px;
+  font-size: 16px;
+  color: #ffffff;
+      h1 {
+          font-family: "Exo Light";
+      }
+      h2 {
+          font-family: "Exo Light";
+      }
+      p {
+          font-family: "Exo Light";
+      }
+
+
+  }
 
 blockquote,
 q {

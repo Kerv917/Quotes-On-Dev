@@ -1,0 +1,38 @@
+/* All Archives Page */
+.page-id-221 {
+    font-family: "Exo Light";
+}
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+        li {
+            padding-right: 1rem;
+            a {
+                font-size: 14pt;
+                text-decoration: none;
+            }
+        }
+    }
+    a {
+        font-size: 14pt;
+        text-decoration: none;
+    }
+
+
+.archive .hentry {
+    border-bottom: 1px dotted white;
+
+    h2 {
+        display: inline-block;
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+    }
+}
